@@ -50,7 +50,7 @@ function check(UserInput, MachineChoise) {
         return start()
     }
     alert("Not available value\nPlease write from 1 to 3")
-    r -= 1
+    round -= 1
     return start()
 }
 
