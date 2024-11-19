@@ -10,47 +10,52 @@ function start () {
     }
     UserInput = parseInt(prompt(`Round ${round}\nInput Rock-1; Paper-2; Scissors-3:`));
     MachineChoise = Math.floor(Math.random() * 3);
-    round += 1;
     return check(UserInput, MachineChoise)
 }
 
 function check(UserInput, MachineChoise) {
     if (UserInput-1 == MachineChoise) {
         alert("Draw")
+        round += 1;
         return start()
     }
     if (UserInput == 1 && MachineChoise == 1) {
         alert("Machine won")
+        round += 1;
         MachineScore += 1;
         return start()
     }
     if (UserInput == 1 && MachineChoise == 2) {
         alert("You won")
         humanScore += 1
+        round += 1;
         return start()
     }
     if (UserInput == 2 && MachineChoise == 0) {
         alert("You won")
         humanScore += 1
+        round += 1;
         return start()
     }
     if (UserInput == 2 && MachineChoise == 2) {
         alert("Machine won")
         MachineScore += 1;
+        round += 1;
         return start()
     }
     if (UserInput == 3 && MachineChoise == 0) {
         alert("Machine won")
         MachineScore += 1;
+        round += 1;
         return start()
     }
     if (UserInput == 3 && MachineChoise == 1) {
         alert("You won")
         humanScore += 1
+        round += 1;
         return start()
     }
     alert("Not available value\nPlease write from 1 to 3")
-    round -= 1
     return start()
 }
 
