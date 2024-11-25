@@ -5,7 +5,7 @@ let MachineScore = 0;
 round = 1;
 
 function start () {
-    if (round == 5){
+    if (round == 6){
         return alert(`Gave finished\n Your score:${humanScore}\n Computer's score:${MachineScore}`)
     }
     UserInput = parseInt(prompt(`Round ${round}\nInput Rock-1; Paper-2; Scissors-3:`));
